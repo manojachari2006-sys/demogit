@@ -24,6 +24,14 @@ public class ApiController {
         return Map.of("status", "running", "message", "Resilient API is working");
     }
 
+    @GetMapping("/info")
+    public Map<String, String> getInfo() {
+        return Map.of(
+                "application", "Resilient API",
+                "version", "1.0",
+                "environment", "development");
+    }
+
     @GetMapping("/data")
     public Map<String, String> getData() {
         return Map.of("message", "Data from resilient-api", "instance", instanceId);
