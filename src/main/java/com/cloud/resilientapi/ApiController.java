@@ -21,7 +21,7 @@ public class ApiController {
 
     @GetMapping("/status")
     public Map<String, String> status() {
-        return Map.of("status", "UP", "instance", instanceId);
+        return Map.of("status", "running", "message", "Resilient API is working");
     }
 
     @GetMapping("/data")
